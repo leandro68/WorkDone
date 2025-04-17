@@ -1,0 +1,25 @@
+services:
+  node-dev-env:
+    build: .
+    command: npm run dev
+    ports: 
+      - 5173:5173
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+    working_dir: /app
+    container_name: node-dev-env
+  json-server:
+    build: .
+    command: npm run server
+    ports:
+      - 3001:3001
+    volumes:
+      - ./:/app
+    working_dir: /app
+    container_name: json-server
+
+
+
+volumes:
+  node_modules:

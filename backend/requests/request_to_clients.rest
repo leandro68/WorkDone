@@ -1,0 +1,16 @@
+GET http://localhost:3001/api/clients/
+
+###
+POST http://localhost:3001/api/clients/ 
+content-type: application/json
+
+{
+    "name": "BETCO",
+    "subscriber": true,
+    "subscriptionCost": 148047
+}
+
+###
+DELETE http://localhost:3001/api/clients/2 HTTP/1.1
+#content-type: application/json
+
